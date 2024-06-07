@@ -1,0 +1,8 @@
+@keyframes moveCharacter {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.moving {
+    animation: moveCharacter 1s forwards;
+}
