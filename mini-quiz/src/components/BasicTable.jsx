@@ -18,7 +18,7 @@ const BasicTable = () => {
     const fetchData = async () => {
         setError('');
         if (!Number.isInteger(Number(count)) || count <= 0) {
-            setError('Lütfen geçerli bir sayı giriniz.');
+            setError('Lütfen geçerli bir sayı giriniz');
             return;
         }
         try {
@@ -26,7 +26,7 @@ const BasicTable = () => {
             const result = await response.json();
             setData(result);
         } catch (error) {
-            setError('Veri çekme hatası: ' + error.message);
+            setError('Hata: ' + error.message);
         }
     };
 
@@ -44,7 +44,7 @@ const BasicTable = () => {
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
-                        <TableRow sx={{border: '1px solid grey', backgroundColor: '#73BF94' }}>
+                        <TableRow sx={{border: '1px solid grey', backgroundColor: '#73BF94'}}>
                             <TableCell>ID</TableCell>
                             <TableCell align="right">Title</TableCell>
                             <TableCell align="right">Body</TableCell>
